@@ -15,6 +15,5 @@ const MainDisplay = () => {
         <Route path={'/profile'} render={()=> <Profile/>}/>
     </div>
 
-
 };
 export default MainDisplay;

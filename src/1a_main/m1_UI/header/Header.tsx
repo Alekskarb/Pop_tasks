@@ -8,7 +8,6 @@ const Header = () => {
         <NavLink to={'/passwordrecovery'}> Password_Recovery </NavLink>
         <NavLink to={'/newpassword'}> New_Password </NavLink>
         <NavLink to={'/profile'}> Profile </NavLink>
-
     </div>
 };
 export default Header;
