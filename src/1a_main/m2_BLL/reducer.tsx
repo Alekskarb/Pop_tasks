@@ -5,8 +5,7 @@ import recoveryReducer from "../../2a_features/f1_auth/a3_passRecovery/recoveryR
 import passwordReducer from "../../2a_features/f1_auth/a4_newPass/passReducer";
 import profileReducer from "../../2a_features/f1_auth/a5_proFile/profileReducer";
 
-
-const reducer = combineReducers({
+const rootReducer = combineReducers({
     log: loginReducer,
     reg: registrationReducer,
     recovery: recoveryReducer,
@@ -14,4 +13,8 @@ const reducer = combineReducers({
     profile: profileReducer,
 });
 
-export default reducer;
+export type RootReducerType = typeof rootReducer;
+
+export type AppStateType = ReturnType<RootReducerType>
+
+export default rootReducer;
