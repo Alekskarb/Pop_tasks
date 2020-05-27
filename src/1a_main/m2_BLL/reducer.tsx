@@ -4,9 +4,10 @@ import registrationReducer from "../../2a_features/f1_auth/a2_registration/regis
 import recoveryReducer from "../../2a_features/f1_auth/a3_passRecovery/recoveryReducer";
 import passwordReducer from "../../2a_features/f1_auth/a4_newPass/passReducer";
 import profileReducer from "../../2a_features/f1_auth/a5_proFile/profileReducer";
+import {createStore} from "redux";
 
 const rootReducer = combineReducers({
-    log: loginReducer,
+    login: loginReducer,
     reg: registrationReducer,
     recovery: recoveryReducer,
     pass: passwordReducer,
@@ -14,7 +15,7 @@ const rootReducer = combineReducers({
 });
 
 export type RootReducerType = typeof rootReducer;
-
 export type AppStateType = ReturnType<RootReducerType>
 
-export default rootReducer;
+const store = createStore(rootReducer);
+export default store;

@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
-import store from './m2_BLL/store';
+import store from './m2_BLL/reducer';
 import MainDisplay from "./m1_UI/header/MainDisplay";
 import Header from "./m1_UI/header/Header";
 
